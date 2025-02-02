@@ -1,6 +1,10 @@
 import Calculator from "./calculator";
 
-const calculator = new Calculator();
+let calculator;
+
+beforeEach(() => {
+    calculator = new Calculator();
+});
 
 test("add method adds value", () => {
     expect(calculator.add(1, 2)).toBe(3);
@@ -34,4 +38,14 @@ test("exception throws error if input is NaN", () => {
     expect(() => {
         calculator.divide("a", "4");
     }).toThrow("Invalid input");
+});
+
+test("Dividing by 0 throws error", () => {
+    expect(() => {
+        calculator.divide(2, 0);
+    }).toThrow("Can't divide by 0");
+});
+
+test("1 digit after dividing fractions", () => {
+    expect(calculator.divide(4, 0.6)).toBe(6.7);
 });

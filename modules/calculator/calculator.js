@@ -32,6 +32,10 @@ export default class Calculator {
             throw new Error("Invalid input");
         }
 
-        return a / b;
+        if (b === 0) {
+            throw new Error("Can't divide by 0");
+        }
+
+        return Number((a / b).toFixed(1));
     };
 }
