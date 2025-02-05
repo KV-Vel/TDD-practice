@@ -1,11 +1,10 @@
 const getAlphabet = (letter) => {
-    const ALPHABET_LOWERCASE = "abcdefghijklmnopqrstuvwxyz".split("");
-    const ALPHABET_UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    const ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 
     if (letter.toUpperCase() === letter) {
-        return ALPHABET_UPPERCASE;
+        return ALPHABET.toUpperCase().split("");
     } else if (letter.toLowerCase() === letter) {
-        return ALPHABET_LOWERCASE;
+        return ALPHABET.split("");
     }
 };
 
