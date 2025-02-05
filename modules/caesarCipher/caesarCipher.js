@@ -3,9 +3,9 @@ const getAlphabet = (letter) => {
 
     if (letter.toUpperCase() === letter) {
         return ALPHABET.toUpperCase().split("");
-    } else if (letter.toLowerCase() === letter) {
-        return ALPHABET.split("");
     }
+
+    return ALPHABET.split("");
 };
 
 const encryptSymbol = (symbol, shift) => {
